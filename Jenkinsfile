@@ -9,7 +9,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''cd complete
-mvn test'''
+mvn clean test site'''
       }
     }
 
