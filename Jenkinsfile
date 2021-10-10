@@ -14,9 +14,20 @@ mvn clean test site'''
     }
 
     stage('build') {
-      steps {
-        sh '''cd complete
+      parallel {
+        stage('build') {
+          steps {
+            sh '''cd complete
 mvn package'''
+          }
+        }
+
+        stage('publish results') {
+          steps {
+            junit '**/surefire-report.html'
+          }
+        }
+
       }
     }
 
