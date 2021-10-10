@@ -22,7 +22,7 @@ mvn package'''
 
     stage('artifact') {
       steps {
-        archiveArtifacts(allowEmptyArchive: true, artifacts: 'rest-hateoas-complete-0.0.1-SNAPSHOT.jar')
+        archiveArtifacts(allowEmptyArchive: true, artifacts: 'complete/target/rest-hateoas-complete-0.0.1-SNAPSHOT.jar')
       }
     }
 
