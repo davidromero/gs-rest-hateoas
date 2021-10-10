@@ -13,5 +13,12 @@ mvn test'''
       }
     }
 
+    stage('build') {
+      steps {
+        sh '''cd complete
+mvn package'''
+      }
+    }
+
   }
 }
