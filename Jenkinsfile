@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'azul/zulu-openjdk:8u265'
+      image 'maven:3.6-jdk-8'
     }
 
   }
